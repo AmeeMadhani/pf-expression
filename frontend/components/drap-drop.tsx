@@ -60,21 +60,11 @@ function DragDrop({ onPrediction }) {
   };
 
   return (
-    <form className="flex w-full items-center">
-      <Textarea
-        className="font-size-md"
-        fullWidth
-        minRows={5}
-        labelPlacement="outside"
-        placeholder="Ask Ayre a question..."
-        value={description}
-        onChange={handleDescriptionChange}
-      />
+    <form className="flex w-full items-center text-white ">
+      
 
-      <Spacer x={4} />
-
-      <div className="rounded-2xl bg-[#191717] flex flex-col items-center justify-center w-fit">
-        <FileUploader handleChange={handleChange} name="file" types={fileTypes} />
+      <div className=" rounded-md bg-[#4A4B4B] border-gray-400 flex items-center justify-center w-fit text-white ">
+        <FileUploader handleChange={handleChange} name="file" types={fileTypes} className="text-white bg-transparent rounded-2xl" />
       </div>
 
       <Spacer x={2} />
@@ -83,7 +73,7 @@ function DragDrop({ onPrediction }) {
         type="submit"
         color="danger"
         variant="shadow"
-        className="w-fit"
+        className="w-fit "
         onClick={handleButtonClick}
       >
         Submit

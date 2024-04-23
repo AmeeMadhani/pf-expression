@@ -27,23 +27,28 @@ export default function Home() {
 
 
   return (
-    <section className="grid justify-items-center">
-      <div className=" grid grid-flow-col items-center gap-10 p-6 pr-40">
-        <div className="grid justify-items-center max-w-full">
+    <section className="grid grid-flow-row justify-items-center ">
+      <div className=" grid grid-flow-col  items-center gap-10 p-6 pr-40">
+        <div className=" justify-items-center max-w-full">
           <SketchfabModel />
         </div>
 
         <div className="">
           <AnswerCard responseData={predictionData} />
         </div>
+
+        
       </div>
-
-      <Divider />
-      <Spacer y={2} />
-
+      <div>
       <div className="grid items-center w-full h-fit">
-        <DragDrop onPrediction={handlePrediction} />
+          <DragDrop onPrediction={handlePrediction} />
+        </div>
       </div>
+
+      {/* <Divider />
+      <Spacer y={2} /> */}
+
+      
     </section>
   );
 }

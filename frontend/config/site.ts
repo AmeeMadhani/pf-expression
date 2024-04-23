@@ -24,6 +24,6 @@ export const siteConfig = {
 		},
 	],
 	links: {
-		github: "https://github.com/projectayre/ayre"
+		github: "https://github.com/sassm1t/Pet-s-facial-expression-detection"
 	},
 };

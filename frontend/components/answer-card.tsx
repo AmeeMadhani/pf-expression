@@ -19,10 +19,10 @@ export const AnswerCard = ({ responseData }) => {
   console.log('Image type:', typeof displayedData.image);
 
   return (
-    <Card className="w-full h-full bg-transparent" css={{ bgBlur: '#0f111466' }}>
+    <Card className="w-full h-full bg-transparent text-black" css={{ bgBlur: '#0f111466' }}>
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
-          <p className="text-md"> Ayre's response... </p>
+          <p className="text-md"> Expression... </p>
         </div>
       </CardHeader>
 
@@ -35,7 +35,7 @@ export const AnswerCard = ({ responseData }) => {
             <Image
               src={displayedData.image}
               alt="Image of the answer"
-              width="500px"
+              width="300px"
               height="auto"
               className="rounded-large justify-items-center"
             />
@@ -44,7 +44,7 @@ export const AnswerCard = ({ responseData }) => {
             <Image
               src={URL.createObjectURL(displayedData.image)}
               alt="Image of the answer"
-              width="500px"
+              width="300px"
               height="auto"
               className="rounded-large justify-items-center"
             />
@@ -52,7 +52,7 @@ export const AnswerCard = ({ responseData }) => {
             <p>Invalid image format</p>
           )
         ) : (
-          <p>No image available</p>
+          <p className="text-md">No image available</p>
         )}
       </CardBody>
 

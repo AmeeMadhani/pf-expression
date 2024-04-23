@@ -29,7 +29,7 @@ export const Navbar = () => {
 					<NextLink className="flex justify-start items-center gap-1 text-xl" href="/">
 						<Logo style={{ width: '50px', height: '50px' }} />
 
-						<p> Ayre </p>
+						<p> PetEx </p>
 					</NextLink>
 				</NavbarBrand>
 			</NavbarContent>

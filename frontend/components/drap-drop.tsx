@@ -9,19 +9,19 @@ import axios from 'axios'; // Add this import
 
 const fileTypes = ['jpg', 'jpeg', 'png'];
 
-function DragDrop({ onPrediction }) {
-  const [file, setFile] = useState(null);
-  const [description, setDescription] = useState('');
 
-  const handleChange = (file) => {
+function DragDrop({ onPrediction }: { onPrediction: (data: any) => void }) {
+  // const [file, setFile] = useState(null);
+  const [file, setFile] = useState<File | null>(null);
+  const handleChange = (file: File) => {
     setFile(file);
   };
 
-  const handleDescriptionChange = (event) => {
-    setDescription(event.target.value);
-  };
+  // const handleDescriptionChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+  //   setDescription(event.target.value);
+  // };
 
-  const handleButtonClick = async (event) => {
+  const handleButtonClick = async (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     if (!file) {
@@ -30,7 +30,7 @@ function DragDrop({ onPrediction }) {
 
     const formData = new FormData();
     formData.append('image', file);
-    formData.append('query', description);
+    // formData.append('query', description);
 
     try {
       const response = await axios.post('http://localhost:7644/predict', formData, {
@@ -50,7 +50,7 @@ function DragDrop({ onPrediction }) {
         console.log('Prediction data:', responseData);
         onPrediction(responseData);
         setFile(null);
-        setDescription('');
+        // setDescription('');
       } else {
         console.error('Error submitting prediction data:', response.status, response.statusText);
       }

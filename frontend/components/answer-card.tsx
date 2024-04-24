@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardHeader, CardBody, CardFooter, Divider, Image } from '@nextui-org/react';
 
-export const AnswerCard = ({ responseData }) => {
+export const AnswerCard = ({ responseData }: { responseData: any }) => {
   const [displayedData, setDisplayedData] = useState(responseData);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export const AnswerCard = ({ responseData }) => {
   console.log('Image type:', typeof displayedData.image);
 
   return (
-    <Card className="w-full h-full bg-transparent text-black" css={{ bgBlur: '#0f111466' }}>
+    <Card className="w-full h-full bg-transparent text-black" >
       <CardHeader className="flex gap-3">
         <div className="flex flex-col">
           <p className="text-md"> Expression... </p>
@@ -59,7 +59,7 @@ export const AnswerCard = ({ responseData }) => {
       <Divider />
 
       <CardFooter>
-        <p>{displayedData.prediction || 'Lorem ipsum dolor sit amet...'}</p>
+        <p>{displayedData.prediction}</p>
       </CardFooter>
     </Card>
   );

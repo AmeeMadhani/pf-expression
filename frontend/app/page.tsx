@@ -16,7 +16,7 @@ const responseData = {
 export default function Home() {
   const [predictionData, setPredictionData] = useState(responseData);
 
-  const handlePrediction = (data) => {
+  const handlePrediction = (data:any) => {
     // Check if the image URL is present in the response data
     if (data.image) {
       // If the image is present, set the image URL directly

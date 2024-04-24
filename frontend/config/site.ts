@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
 	name: "petFacial",
-	description: "Semantic-and-Sentiment-Attentive Visual Question Answering",
+	description: "",
 	navItems: [
 		{
 			label: "",
@@ -10,7 +10,7 @@ export const siteConfig = {
 		},
 		{
 			label: "Algorithm",
-			href: "/algorithm",
+			href: "/",
 		},
 	],
 	navMenuItems: [
@@ -20,7 +20,7 @@ export const siteConfig = {
 		},
 		{
 			label: "Algorithm",
-			href: "/algorithm",
+			href: "/",
 		},
 	],
 	links: {

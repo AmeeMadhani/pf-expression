@@ -38,13 +38,13 @@ def check_health():
 
 
 def clip_predict(image):
-    inputs = processor(text=["Happy", "Sad", "Angry", "Other"], images=image, return_tensors="pt", padding=True)
+    inputs = processor(text=["Happy", "Sad", "Angry","Scared","Curious", "Other"], images=image, return_tensors="pt", padding=True)
     outputs = model(**inputs)
 
     logits_per_image = outputs.logits_per_image
     probs = logits_per_image.softmax(dim=1)
     
-    predicted_labels = ["Happy", "Sad", "Angry", "Other"]
+    predicted_labels = ["Happy", "Sad", "Angry", "Scared","Curious","Other"]
     max_prob, predicted_idx = torch.max(probs, dim=1)
 
     predicted_label = predicted_labels[predicted_idx[0].item()]

@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-	name: "ayre",
+	name: "petFacial",
 	description: "Semantic-and-Sentiment-Attentive Visual Question Answering",
 	navItems: [
 		{

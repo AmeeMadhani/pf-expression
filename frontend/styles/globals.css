@@ -4,10 +4,13 @@
 
 body,
 html {
-  background-image: url('../public/background.png');
-  background-size: 200% 100%;
+  background-image: url('../public/background1.png');
+  background-size: 100% 100%;
   background-attachment: fixed;
-  background-position: top left, center right;
+  background-position-y: calc(100% + 50px); /* Adjust the position */
+  background-position-x: calc(100% + 50px); /* Adjust the position */
+
+
 }
 
 @font-face {

@@ -33,7 +33,7 @@ function DragDrop({ onPrediction }: { onPrediction: (data: any) => void }) {
     // formData.append('query', description);
 
     try {
-      const response = await axios.post('https://2aa1-2401-4900-5d83-c21-644d-4d25-6a37-1c22.ngrok-free.app/predict/', formData, {
+      const response = await axios.post('https://7815-115-241-34-101.ngrok-free.app/predict/', formData, {
         headers: {
           'Cache-Control': 'no-cache',
           'Pragma': 'no-cache',
